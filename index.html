@@ -2,19 +2,45 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissors</title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="style.css">
     </head>
+
 
     <body>
         <div class="flex-container">
-            <h1>Rock Paper Scissors</h1>
-            <button onclick="game()">Start Game</button>
-            <p>
-                This game is played in the console. On Windows press <strong>CTRL+Shift+J</strong>
-                to open the console.♥ my name rajat jaiswal.
-            </p>
+            <h1 class="heading">ROCK PAPER SCISSORS</h1>
+            <!-- <button onclick="game()">Start Game</button> -->
+            
+            <div class="scores">
+                <p>Computer : 
+                    <span id="computer_score">0</span>
+                </p>
+                <p>
+                    You :
+                    <span id="user_score">0</span>
+                </p>
+            </div>
+
+            <div class="options">
+                <button onclick="checker('rock')">
+                    <i class="fa fa-hand-rock-o"></i>
+                </button>
+                <button onclick="checker('paper')">
+                    <i class="fa fa-hand-paper-o"></i>
+                </button>
+                <button onclick="checker('scissor')">
+                    <i class="fa fa-hand-scissors-o"></i>
+                </button>
+            </div>
+
+            <div class="details">
+                <p id="user_choice"></p>
+                <p id="comp_choice"></p>
+                <p id="result"></p>
+            </div>
+
         </div>
     </body>
     <script src="game.js"></script>
