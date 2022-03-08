@@ -58,7 +58,7 @@ function checker(input) {
             location.reload();
         else{
             alert("Thankyou for playing♥");
-            location.quit();
+            location.reload();
         }
     }
 }
