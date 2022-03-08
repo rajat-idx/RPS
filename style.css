@@ -9,7 +9,7 @@
   }
   body{
     height: auto;
-    background-color: #ffcf1b;
+    background-color: #7a18e9;
   }
   .flex-container{
     display: flex;
@@ -23,7 +23,7 @@
     transform: translate(-50%,-50%);
     margin: 25% 50%;
     border-radius: 10px;
-    box-shadow: chocolate 0 0 30px;
+    box-shadow: rgb(226, 179, 24) 0 0 30px;
   }
   .scores{
     margin-top: 30px;
@@ -40,13 +40,39 @@
     background-color: #ffcf1b;
     color: black;
     border: none;
-    font-size: 50px;
+    font-size: 40px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     /* outline: none; */
     cursor: pointer;
   }
+  /*-------------- Hover text is not working ---------------*/
+  .hoverDiv{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .hiddenText{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  .hoverDiv:hover .hiddenText{
+    visibility: visible;
+  }
+  /* -------------------------------- */
   .details{
     margin-top: 25px;
     text-align: center;

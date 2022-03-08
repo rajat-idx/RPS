@@ -19,7 +19,7 @@ let choicesObject = {
 }
 
 let options = ["rock", "paper", "scissor"];
-
+let count = 0;
 function checker(input) {
     //Round result details
     const CP = options[Math.floor(Math.random() * options.length)];
@@ -29,22 +29,36 @@ function checker(input) {
 
     document.getElementById("user_choice").innerHTML =
     `You choose <span> ${input.toUpperCase()} </span>`;
-    console.log("Computer:"+CP+" vs "+"you:"+input);
+
+    // count++;
 
     switch(choicesObject[input][CP]){
-        case "win":     
+        case "win":  
+                    result_ref.style.cssText = "background-color: #cefdce; color: #689f38";   
                     result_ref.innerHTML = "YOU WIN";
-                    user_score++;
+                    user_score++;   count++;
                     break;
         case "lose":
+                    result_ref.style.cssText = "background-color: #ffdde0; color: #d32f2f";
                     result_ref.innerHTML = "YOU LOSE";
-                    computer_score++;
+                    computer_score++;   count++;
                     break;
         case "tie":  
+                    result_ref.style.cssText = "background-color: #e5e5e5; color: #808080";
                     result_ref.innerHTML = "TIE";
                     break;
     }
 
     document.getElementById("computer_score").innerHTML = computer_score;
     document.getElementById("user_score").innerHTML = user_score;
+
+    if(count > 5){
+        let play =confirm("Do you want to play again?");
+        if(play)
+            location.reload();
+        else{
+            alert("Thankyou for playing♥");
+            location.quit();
+        }
+    }
 }

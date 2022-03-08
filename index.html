@@ -11,7 +11,6 @@
     <body>
         <div class="flex-container">
             <h1 class="heading">ROCK PAPER SCISSORS</h1>
-            <!-- <button onclick="game()">Start Game</button> -->
             
             <div class="scores">
                 <p>Computer : 
@@ -24,15 +23,22 @@
             </div>
 
             <div class="options">
-                <button onclick="checker('rock')">
-                    <i class="fa fa-hand-rock-o"></i>
-                </button>
-                <button onclick="checker('paper')">
-                    <i class="fa fa-hand-paper-o"></i>
-                </button>
-                <button onclick="checker('scissor')">
-                    <i class="fa fa-hand-scissors-o"></i>
-                </button>
+
+                    <button class="hoverDiv" onclick="checker('rock')">
+                        <i class="fa fa-hand-rock-o"></i>
+                    </button>
+                    <div class="hiddenText">Rock</div>
+
+                    <button class="hoverDiv" onclick="checker('paper')">
+                        <i class="fa fa-hand-paper-o"></i>
+                    </button>
+                    <div class="hiddenText">Paper</div>
+
+                    <button class="hoverDiv" onclick="checker('scissor')">
+                        <i class="fa fa-hand-scissors-o"></i>
+                    </button>
+                    <div class="hiddenText">Scissors</div>
+
             </div>
 
             <div class="details">
